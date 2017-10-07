@@ -8,18 +8,17 @@ public class Ligacao {
 	private String cidadeDeDestino;
 	private String UFDeDestino;
 	private Cliente cliente;
+	private Empresa empresa;
 
-	// tostring
 	@Override
 	public String toString() {
 		return "Ligacao [codigo=" + codigo + ", nDeTelefoneDestino=" + nDeTelefoneDestino + ", dehDeInicio="
 				+ dehDeInicio + ", dehDeFim=" + dehDeFim + ", cidadeDeDestino=" + cidadeDeDestino + ", UFDeDestino="
-				+ UFDeDestino + ", cliente=" + cliente + "]";
+				+ UFDeDestino + "]";
 	}
 
-	// construtor
 	public Ligacao(int codigo, String nDeTelefoneDestino, LocalDateTime dehDeInicio, LocalDateTime dehDeFim,
-			String cidadeDeDestino, String uFDeDestino, Cliente cliente) {
+			String cidadeDeDestino, String uFDeDestino, Cliente cliente, Empresa empresa) {
 		super();
 		this.codigo = codigo;
 		this.nDeTelefoneDestino = nDeTelefoneDestino;
@@ -28,9 +27,9 @@ public class Ligacao {
 		this.cidadeDeDestino = cidadeDeDestino;
 		UFDeDestino = uFDeDestino;
 		this.cliente = cliente;
+		this.empresa = empresa;
 	}
 
-	// get e set
 	public int getCodigo() {
 		return codigo;
 	}
@@ -85,6 +84,14 @@ public class Ligacao {
 
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
+	}
+
+	public Empresa getEmpresa() {
+		return empresa;
+	}
+
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
 	}
 
 }

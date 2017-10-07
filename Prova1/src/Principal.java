@@ -5,12 +5,8 @@ public class Principal {
 
 		BDSimulado bd = new BDSimulado();
 
-		System.out.println(bd.getInfoCliente("Evandro da Silva"));
-
-		System.out.println(bd.ligacoesPorCliente("João dos Montes"));
-
-		System.out.println(bd.ligacoesPorUF("RJ"));
-		System.out.println(bd.ligacoesUFDiferente());
+		System.out.println(bd.getInfoEmpresa("FNDE"));
+		System.out.println(bd.ligacoesPorEmpresa("FNDE"));
 	}
 
 }
